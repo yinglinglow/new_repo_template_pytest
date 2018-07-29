@@ -6,7 +6,7 @@ C:\ProgramData\Anaconda3\python.exe main.py
 import sys
 import pandas as pd
 
-def sample_get_column_names(df):
+def test_function(df):
     col_names = df.columns
     return col_names
 
@@ -22,6 +22,6 @@ if __name__ == '__main__':
     
     # run function
     df = pd.read_csv(filepath)
-    col_names = sample_get_column_names(df)
+    col_names = test_function(df)
 
     print(col_names)

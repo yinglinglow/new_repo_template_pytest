@@ -21,8 +21,12 @@ class Test_main(unittest.TestCase):
         # import end result to test against
         path = str(pathlib.Path(__file__).parents[1]) # generates path to proj_etd
         test_filepath = ''
+        test = pd.read_csv(test_filepath)
         
         # generate file using imported function
+        check_raw_filepath = ''
+        check_raw = pd.read_csv(check_raw_filepath)
+        check = test_function(check_raw)
         
         # test
         assert_frame_equal(test, check)
